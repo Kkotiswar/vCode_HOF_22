@@ -73,4 +73,4 @@ const NavbarSec = (props) => {
     );
 };
 
-export default NavbarSec;v
+export default NavbarSec;
