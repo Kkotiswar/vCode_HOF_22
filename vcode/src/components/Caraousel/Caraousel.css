@@ -1,0 +1,17 @@
+.cr{
+    height: 400px;
+    width: 1000px;
+    margin-top: 8%;
+    background-color: grey;
+}
+.cr-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 1000px;
+    height: 400px;
+    
+
+}
