@@ -29,14 +29,14 @@ const Login = () => {
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" name="email" value={user.value} placeholder="Enter email" onChange={handleChange}/>
-                        <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
-                        </Form.Text>
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" name="password" value={user.password} placeholder="Password" onChange={handleChange}/>
+                        <Form.Text className="text-muted">
+                            We'll never share your credentials with anyone else.
+                        </Form.Text>
                     </Form.Group>
                     <Button variant="primary" type="submit">
                         Log In

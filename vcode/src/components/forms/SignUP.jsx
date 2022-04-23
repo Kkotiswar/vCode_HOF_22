@@ -67,15 +67,21 @@ const SignUp = () => {
                     </Row>
 
                     <Form.Group className="mb-3" controlId="formGridAddress1">
-                        <Form.Label>Address</Form.Label>
-                        <Form.Control required placeholder="1234 Main St" name='Address' value={user.Address} onChange={handleChange}/>
+                        <Form.Label>CodeForces Handle</Form.Label>
+                        <Form.Control required placeholder="CodeForces Handle" name='Address' value={user.CodeForces_Handle} onChange={handleChange}/>
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formGridAddress1">
+<<<<<<< Updated upstream
                         <Form.Label>CodeForces Handle</Form.Label>
                         <Form.Control required placeholder="CodeForces Handle" name='CfHandle' value={user.CfHandle} onChange={handleChange}/>
+=======
+                        <Form.Label>Address</Form.Label>
+                        <Form.Control required placeholder="1234 Main St" name='Address' value={user.Address} onChange={handleChange}/>
+>>>>>>> Stashed changes
                     </Form.Group>
 
+                    
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="formGridCity">
                             <Form.Label>City</Form.Label>
@@ -145,7 +151,7 @@ const SignUp = () => {
                     </Row>
 
                     <Form.Group className="mb-3" id="formGridCheckbox">
-                        <Form.Check  type="checkbox" label="Remember My Password" />
+                        <Form.Check  type="checkbox" label="Remember My Login Info" />
                     </Form.Group>
 
                     <Button variant="primary" onSubmit={handleSubmit} type="submit">
