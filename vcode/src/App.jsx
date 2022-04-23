@@ -30,11 +30,12 @@ function App() {
      { <NavbarSec
        handleBtnClick={handleBtnClick}
      />}
-        { form === true ? <Auth /> : <Caraousel />} 
-          {/* <NavbarSec />
+        { form === true ? <Auth /> : <null />}
+          {/* <NavbarSec /> */}
             <Router>
              <Routes>
                 <Route exact path='/' element={<Caraousel />} />
+                <Route path="/Auth" element={<Auth />} />
                 <Route path='/about' element={<About />} />
                 <Route path='/contests' element={<Contests />} />
                 <Route path='/problems' element={<Problems />} />
@@ -42,7 +43,7 @@ function App() {
                 <Route path='/compare' element={<Problems />} />
                 <Route path='*' element={<div>ERROR</div>} />
               </Routes>
-            </Router> */}
+            </Router>
 
             <GetProblem />
               
