@@ -2,11 +2,14 @@ const express = require('express');
 const User = require('../models/User');
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
-
+router.use(express.json());
 // const bcrypt = require('bcryptjs'); // not working 1 check 
 
 const jwt = require('jsonwebtoken');
+// const fetchuser = require('../middleware/fetchuser');
 const fetchuser = require('../middleware/fetchuser');
+
+const JWT_SECRET = 'akabakjdkadaks';
 
 // Create a user using : POST "/api/auth/". 
 
@@ -79,7 +82,6 @@ const fetchuser = require('../middleware/fetchuser');
 //     })
 // })
 
-const JWT_SECRET = "akabakjdkadaks";
 
 // Create a user using : POST "/api/auth/createUser". No login required 
 
@@ -160,7 +162,7 @@ router.post('/login', [
     const {email,password} = req.body;
 
     try {
-        let user = await User.findOne({email});
+        const user = await User.findOne({email});
         if (!user) {
             return res.status(400).json({error : " 1 Please try to login with correct Credentails"});
         }
@@ -200,27 +202,47 @@ router.post('/login', [
 
 
 
-// Route 3 : 
-// Get loggedin user details : POST "/api/auth/getuser". Login required 
+// // Route 3 : 
+// // Get loggedin user details : POST "/api/auth/getuser". Login required 
 
-router.get('/getuser/:id', fetchuser , async (req, res) => {
+// router.get('/getuser/:id', fetchuser , async (req, res) => {
 
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-    }
+//     const errors = validationResult(req);
+//     if (!errors.isEmpty()) {
+//         return res.status(400).json({ errors: errors.array() });
+//     }
+
+//     try {
+//         const userId = req.params.id;
+//         const user = await User.findById(userId).select("-password");
+//         res.send(user);
+
+//     } catch (error) {
+//         console.log(error.message);
+//         res.status(500).send("Internal server occured !!");
+//     }
+
+// })
+
+// ROUTE 3: Get loggedin User Details using: POST "/api/auth/getuser". Login required
+router.get('/getuser', fetchuser,  async (req, res) => {
+    
+    // const token=req.headers['auth-token'];
+    // const unencrypt=jwt.decode(token)
+
+    // console.log(unencrypt)
 
     try {
-        const userId = req.params.id;
-        const user = await User.findById(userId).select("-password");
-        res.send(user);
-
+      console.log(req.userId);
+      userId = req.userId;
+      const user = await User.findById(userId).select("-password");
+      console.log(user);
+      res.send(user)
     } catch (error) {
-        console.log(error.message);
-        res.status(500).send("Internal server occured !!");
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
     }
+  })
 
-})
-
-
+//   module.exports = router
 module.exports = router

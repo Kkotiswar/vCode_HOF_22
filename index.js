@@ -15,12 +15,13 @@ app.get('/', (req, res) => {
 
 
 app.use(express.json());
+app.use(express.urlencoded());
 
 // Available Routes 
 app.use('/api/auth' , require('./routes/auth'));
 app.use('/api/notes' , require('./routes/notes'));
 
-
+ 
 app.listen(port,() => {
     console.log(`Example app lsitening at https://localhost:${port}`);
 })
