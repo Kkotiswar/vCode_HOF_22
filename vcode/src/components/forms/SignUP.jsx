@@ -31,8 +31,8 @@ const SignUp = () => {
         e.preventDefault();
         const {fname,lname,email,password,Address,city,state,programmingLanguage,Zipcode} = user;
         alert(user.lname+"is posted")
-        axios.post("http://localhost:9002/register",user)
-        .then(res=>{
+        axios.post("http://localhost:5000/createuser",user)
+        .then(res=>{    
             console.log(res);
         });
     }
