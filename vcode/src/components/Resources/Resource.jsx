@@ -72,59 +72,7 @@ const Resource=()=>{
                 <li><a href="https://cp-algorithms.com/sequences/longest_increasing_subsequence.html" className="list-item">Longest Increasing Subsequence</a></li>
                 <li><a href="https://cp-algorithms.com/sequences/k-th.html" className="list-item">Kth order statistic in O(n)</a></li>
             </ul>
-        </div>
-//    <ul>
-//    {/* <li><strong>Fundamentals</strong><ul> */}
-//        {/* <li><a href="algebra/binary-exp.html">Binary Exponentiation</a></li>
-//    <li><a href="algebra/euclid-algorithm.html">Euclidean algorithm for computing the greatest common divisor</a></li>
-//    <li><a href="algebra/extended-euclid-algorithm.html">Extended Euclidean Algorithm</a></li>
-//    <li><a href="algebra/linear-diophantine-equation.html">Linear Diophantine Equations</a></li>
-//    <li><a href="algebra/fibonacci-numbers.html">Fibonacci Numbers</a></li>
-//    </ul>
-//    </li>
-//    <li><strong>Prime numbers</strong><ul>
-//        <li><a href="algebra/sieve-of-eratosthenes.html">Sieve of Eratosthenes</a></li>
-//    <li><a href="algebra/prime-sieve-linear.html">Linear Sieve</a></li>
-//    <li><a href="algebra/primality_tests.html">Primality tests</a></li>
-//    <li><a href="algebra/factorization.html">Integer factorization</a></li>
-//    </ul>
-//    </li>
-//    <li><strong>Number-theoretic functions</strong><ul>
-//        <li><a href="algebra/phi-function.html">Euler's totient function</a></li>
-//    <li><a href="algebra/divisors.html">Number of divisors / sum of divisors</a></li>
-//    </ul>
-//    </li>
-//    <li><strong>Modular arithmetic</strong><ul>
-//        <li><a href="algebra/module-inverse.html">Modular Inverse</a></li>
-//    <li><a href="algebra/linear_congruence_equation.html">Linear Congruence Equation</a></li>
-//    <li><a href="algebra/chinese-remainder-theorem.html">Chinese Remainder Theorem</a></li>
-//    <li><a href="algebra/factorial-modulo.html">Factorial modulo <span class="arithmatex"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="0" style="font-size: 119.5%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="2" style="font-size: 119.5%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math></mjx-assistive-mml></mjx-container></mjx-assistive-mml></mjx-container></span></a></li>
-//    <li><a href="algebra/discrete-log.html">Discrete Log</a></li>
-//    <li><a href="algebra/primitive-root.html">Primitive Root</a></li>
-//    <li><a href="algebra/discrete-root.html">Discrete Root</a></li>
-//    <li><a href="algebra/montgomery_multiplication.html">Montgomery Multiplication</a></li>
-//    </ul>
-//    </li>
-//    <li><strong>Number systems</strong><ul>
-//        <li><a href="algebra/balanced-ternary.html">Balanced Ternary</a></li>
-//    <li><a href="algebra/gray-code.html">Gray code</a></li>
-//    </ul>
-//    </li>
-//    <li><strong>Miscellaneous</strong><ul>
-//        <li><a href="algebra/all-submasks.html">Enumerating submasks of a bitmask</a></li>
-//    <li><a href="algebra/big-integer.html">Arbitrary-Precision Arithmetic</a></li>
-//    <li><a href="algebra/fft.html">Fast Fourier transform</a></li>
-//    <li><a href="algebra/polynomial.html">Operations on polynomials and series</a></li>
-//    <li><a href="algebra/continued-fractions.html">Continued fractions</a></li>
-//    </ul>
-//    </li> */}
-
-//    <li></li>
-    
-
-//    </ul>
-
-   
+        </div>   
     );
 }
 export default Resource;
