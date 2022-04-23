@@ -72,13 +72,10 @@ const SignUp = () => {
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formGridAddress1">
-<<<<<<< Updated upstream
                         <Form.Label>CodeForces Handle</Form.Label>
                         <Form.Control required placeholder="CodeForces Handle" name='CfHandle' value={user.CfHandle} onChange={handleChange}/>
-=======
                         <Form.Label>Address</Form.Label>
                         <Form.Control required placeholder="1234 Main St" name='Address' value={user.Address} onChange={handleChange}/>
->>>>>>> Stashed changes
                     </Form.Group>
 
                     
