@@ -1,3 +1,13 @@
+
+
+
+:root{
+  --color1:#2b616d,
+  --color2:#b2dbd5,
+  --color3:#ffffff,
+  --color4:#fa8d62
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +46,4 @@
     transform: rotate(360deg);
   }
 }
+

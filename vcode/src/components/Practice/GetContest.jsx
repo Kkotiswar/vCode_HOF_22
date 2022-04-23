@@ -32,6 +32,7 @@ const GetContest = (props) => {
    
     const fetchData = async () => {
         const result = await axios.get(url);
+        console.log(result);
         setContest(result.data.result);
     }
     const loadmore = () => {
