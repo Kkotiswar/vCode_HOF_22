@@ -6,11 +6,9 @@ import axios from "axios";
 const SignUp = () => {
 
     const [user, setUser] = useState({
-        fname: "",
-        lname: "",
+        name: "",
         email: "",
         password: "",
-        Address: "",
         CF_Handle:"",
         city: "",
         State: "Andhra Pradesh",
@@ -27,12 +25,12 @@ const SignUp = () => {
         });
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const {fname,lname,email,password,Address,city,state,programmingLanguage,Zipcode} = user;
+    const register = () => {
+        const {name,email,password,CF_Handle,city,State,programmingLanguage,Zipcode} = user;
         alert(user.lname+"is posted")
-        axios.post("http://localhost:5000/createuser",user)
+        axios.post("http://localhost:9002/register",user)
         .then(res=>{    
+            alert(res.body);
             console.log(res);
         });
     }
@@ -44,13 +42,8 @@ const SignUp = () => {
                 <Form>
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="formGridEmail">
-                            <Form.Label>First Name</Form.Label>
-                            <Form.Control required  name="fname" value={user.fname} type="text" placeholder="Enter First Name" onChange={handleChange} />
-                        </Form.Group>
-
-                        <Form.Group as={Col} controlId="formGridPassword">
-                            <Form.Label>Last Name</Form.Label>
-                            <Form.Control required name="lname" value={user.lname} type="text" placeholder="Last Name" onChange={handleChange} />
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control required  name="name" value={user.name} type="text" placeholder="Enter First Name" onChange={handleChange} />
                         </Form.Group>
                     </Row>
 
@@ -71,12 +64,6 @@ const SignUp = () => {
                         <Form.Control required placeholder="CodeForces Handle" name='CF_Handle' value={user.CF_Handle} onChange={handleChange}/>
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formGridAddress1">
-                        <Form.Label>Address</Form.Label>
-                        <Form.Control required placeholder="1234 Main St" name='Address' value={user.Address} onChange={handleChange}/>
-                    </Form.Group>
-
-                    
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="formGridCity">
                             <Form.Label>City</Form.Label>
@@ -149,7 +136,7 @@ const SignUp = () => {
                         <Form.Check  type="checkbox" label="Remember My Login Info" />
                     </Form.Group>
 
-                    <Button variant="primary" onSubmit={handleSubmit} type="submit">
+                    <Button variant="primary" onClick={register} >
                         Submit
                     </Button>
                 </Form>

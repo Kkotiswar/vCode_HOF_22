@@ -50,20 +50,16 @@ const NavbarSec = (props) => {
         <NavDropdown.Item href="/compare">Compare</NavDropdown.Item>
       </NavDropdown>
       <NavDropdown className='nav_item_class' title="Learn" id="navbarScrollingDropdown">
-        <NavDropdown.Item  href="/Resource">Resource</NavDropdown.Item>
-        <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+        <NavDropdown.Item  href="/Resources">Resources</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="#action5">
-          Something else here
+        <NavDropdown.Item href="/Tutorials">Tutorials</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="/blogs">
+          Blogs
         </NavDropdown.Item>
       </NavDropdown>
       <NavDropdown className='nav_item_class' title="More" id="navbarScrollingDropdown">
-        <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action5">
-          Something else here
-        </NavDropdown.Item>
+        <NavDropdown.Item href="/about">About us</NavDropdown.Item>
       </NavDropdown>
     </Nav>
   </Container>

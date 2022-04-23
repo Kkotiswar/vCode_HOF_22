@@ -13,7 +13,7 @@ import Resource from './components/Resources/Resource';
 
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import Resource from './components/Resources/Resource';
-
+import Err from './components/Err/Err';
 
 function App() {
   const [form, setForm] = React.useState(false);
@@ -33,7 +33,8 @@ function App() {
        handleBtnClick={handleBtnClick}
      />}
         { form === true ? <Auth /> : <null />}
-          {/* <NavbarSec /> */}
+        {/* {alert( "Hello Chutiya")} */}
+          {/* <NavbarSec />  */}
             <Router>
              <Routes>
                 <Route exact path='/' element={<Caraousel />} />
@@ -44,11 +45,11 @@ function App() {
                 <Route path='/mystats' element={<Problems />} />
                 <Route path='/compare' element={<Problems />} />
                 <Route path='/Resource' element={<Resource />} />
-                <Route path='*' element={<div>ERROR</div>} />
+                <Route path='*' element={< Err/> } />
               </Routes>
             </Router>
 
-            <GetProblem />
+            {/* <GetProblem /> */}
               
         </div>
         

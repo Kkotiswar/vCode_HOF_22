@@ -22,6 +22,14 @@ const Login = () => {
         })
     }
 
+    function Login(){
+        const {email,password} = user;
+        axios.post("http://localhost:9002/login",user)
+        .then(res=>{
+            alert(res);
+        })
+    }
+
     return (
             <div>
             {console.log(user)}
@@ -38,7 +46,7 @@ const Login = () => {
                             We'll never share your credentials with anyone else.
                         </Form.Text>
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" onClick={Login}>
                         Log In
                     </Button>
                 </Form>
