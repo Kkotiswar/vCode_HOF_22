@@ -24,9 +24,9 @@ function App() {
   }
     return (
         <div className="App">
-        <NavbarTop 
+        {/* <NavbarTop 
        handleBtnClick={handleBtnClick}
-     />
+     /> */}
      { <NavbarSec
        handleBtnClick={handleBtnClick}
      />}

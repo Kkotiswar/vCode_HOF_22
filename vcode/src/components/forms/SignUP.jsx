@@ -70,6 +70,11 @@ const SignUp = () => {
                         <Form.Control required placeholder="1234 Main St" name='Address' value={user.Address} onChange={handleChange}/>
                     </Form.Group>
 
+                    <Form.Group className="mb-3" controlId="formGridAddress1">
+                        <Form.Label>CodeForces Handle</Form.Label>
+                        <Form.Control required placeholder="CodeForces Handle" name='Address' value={user.CodeForces_Handle} onChange={handleChange}/>
+                    </Form.Group>
+
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="formGridCity">
                             <Form.Label>City</Form.Label>
