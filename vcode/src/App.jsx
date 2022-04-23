@@ -9,8 +9,10 @@ import NavbarTop from './components/Navbar/NavbarTop';
 import Problems from './components/Practice/Problems';
 import Contests from './components/Practice/Contests';
 import GetProblem from './components/Practice/GetProblem';
+import Resource from './components/Resources/Resource';
 
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Resource from './components/Resources/Resource';
 
 
 function App() {
@@ -41,6 +43,7 @@ function App() {
                 <Route path='/problems' element={<Problems />} />
                 <Route path='/mystats' element={<Problems />} />
                 <Route path='/compare' element={<Problems />} />
+                <Route path='/Resource' element={<Resource />} />
                 <Route path='*' element={<div>ERROR</div>} />
               </Routes>
             </Router>

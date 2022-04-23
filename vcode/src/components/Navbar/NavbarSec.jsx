@@ -50,7 +50,7 @@ const NavbarSec = (props) => {
         <NavDropdown.Item href="/compare">Compare</NavDropdown.Item>
       </NavDropdown>
       <NavDropdown className='nav_item_class' title="Learn" id="navbarScrollingDropdown">
-        <NavDropdown.Item  href="#action3">Action</NavDropdown.Item>
+        <NavDropdown.Item  href="/Resource">Resource</NavDropdown.Item>
         <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action5">
