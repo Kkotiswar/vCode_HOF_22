@@ -11,6 +11,7 @@ const SignUp = () => {
         email: "",
         password: "",
         Address: "",
+        CfHandle:"",
         city: "",
         State: "Andhra Pradesh",
         programmingLanguage: "C++",
@@ -72,7 +73,7 @@ const SignUp = () => {
 
                     <Form.Group className="mb-3" controlId="formGridAddress1">
                         <Form.Label>CodeForces Handle</Form.Label>
-                        <Form.Control required placeholder="CodeForces Handle" name='Address' value={user.CodeForces_Handle} onChange={handleChange}/>
+                        <Form.Control required placeholder="CodeForces Handle" name='CfHandle' value={user.CfHandle} onChange={handleChange}/>
                     </Form.Group>
 
                     <Row className="mb-3">
