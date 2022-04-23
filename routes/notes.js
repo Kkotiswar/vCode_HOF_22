@@ -7,7 +7,6 @@ const User = require('../models/User');
 // Route 1 : Get all the notes  
 router.get('/fetchallnotes', fetchuser, async (req, res) => {
 
-
   try {
     console.log(req.userId);
     const userId = req.userId;
@@ -15,7 +14,9 @@ router.get('/fetchallnotes', fetchuser, async (req, res) => {
 
     console.log(user);
 
-    const allnotes = await Notes.find({ name: user._id });
+    
+
+    const allnotes = await Notes.find({ name: user.name });
 
     console.log(allnotes);
 
@@ -64,6 +65,42 @@ async (req, res) => {
   }
 
 })
+
+
+// Route 3 : Update note using POST "/api/auth/addnote".  Login required 
+router.post('/addnote', fetchuser, async (req, res) => {
+
+  // const errors = validationResult(req);
+  // if (!errors.isEmpty()) {
+  //   return res.status(400).json({ errors: errors.array() });
+  // }
+
+  try {
+    console.log(req.body);
+
+    const { title, description, tag } = req.body;
+
+    // const newNote = new Notes({
+    //   title, description, tag, user: req.userId
+    // })
+    const newNote = {};
+    if (title) { newNote.title = title; }
+    if (description) { newNote.description = description; }
+    if (tag) { newNote.tag = tag; }
+    
+    // find the node to be updated and update it 
+    const note = newNote.findByIdAndUpdate();
+    
+
+    const savedNote = await note.save();
+    res.json(savedNote);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
+  }
+
+})
+
 
 
 module.exports = router
