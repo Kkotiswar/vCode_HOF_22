@@ -12,7 +12,7 @@ import GetProblem from './components/Practice/GetProblem';
 import Resource from './components/Resources/Resource';
 
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Resource from './components/Resources/Resource';
+// import Resource from './components/Resources/Resource';
 
 
 function App() {
