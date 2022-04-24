@@ -1,0 +1,27 @@
+.post-label
+{
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.form-group
+{
+    margin: auto 10%;
+}
+
+.post-button
+{
+    margin-left: 72%;
+}
+
+.img
+{
+    height: 50px;
+    width:50px;
+    border-radius: 50%;
+}
+
+.post-div
+{
+    margin: 100%;
+}

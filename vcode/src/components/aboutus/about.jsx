@@ -11,7 +11,7 @@ function createEntry(currentEntry)
         img={currentEntry.img}
         role={currentEntry.role}
         linkedin={currentEntry.linkedin}
-        twitter={currentEntry.twitter}
+        mail={currentEntry.mail}
         github={currentEntry.github}
        />
     );
@@ -20,7 +20,7 @@ function createEntry(currentEntry)
 function app()
 {
     return (
-        <div>
+        <div style={{margin: "10% auto"}}>
             <h1> <span>ABOUT</span> </h1>
             <dl className="dictionary"> {data.map(createEntry)} </dl>
         </div>

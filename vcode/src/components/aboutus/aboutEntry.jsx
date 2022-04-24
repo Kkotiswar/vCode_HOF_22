@@ -14,9 +14,9 @@ function entry(props)
             </dt>
             <dd> {props.role} </dd>
             <ul>
-                <a className="link" href='https://www.linkedin.com/in/aditya-gupta-83426b237/'><FaLinkedin /></a>
-                <a className="link" href='https://github.com/adityastro'><AiFillGithub /></a>
-                <a className="link" href='lit2020055@iiitl.ac.in'><CgMail /></a>
+                <a className="link" href={props.linkedin}><FaLinkedin /></a>
+                <a className="link" href={props.github}><AiFillGithub /></a>
+                <a className="link" href={props.mail}><CgMail /></a>
             </ul>
         </div>
     );
